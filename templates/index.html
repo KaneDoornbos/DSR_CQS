@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Question CRUD</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+
+        <h1>Question CRUD</h1>
+        <!-- Form for adding a new question -->
+        <form id="questionForm">
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select class="form-control" id="category" name="category">
+                    <option value="Resistance">Resistance</option>
+                    <option value="Reflection">Reflection</option>
+                    <option value="Decision">Decision</option>
+                    <option value="Action">Action</option>
+                    <option value="Maintenance">Maintenance</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question">Question:</label>
+                <input type="text" class="form-control" id="question" name="question">
+            </div>
+            <div class="form-group">
+                <label for="answer1">Answer 1:</label>
+                <input type="text" class="form-control" id="answer1" name="answer1">
+            </div>
+            <div class="form-group">
+                <label for="answer1">Answer 2:</label>
+                <input type="text" class="form-control" id="answer2" name="answer2">
+            </div>
+            <div class="form-group">
+                <label for="answer1">Answer 3:</label>
+                <input type="text" class="form-control" id="answer3" name="answer3">
+            </div>
+            <div class="form-group">
+                <label for="answer1">Answer 4:</label>
+                <input type="text" class="form-control" id="answer4" name="answer4">
+            </div>
+            <div class="form-group">
+                <label for="answer1">Answer 5:</label>
+                <input type="text" class="form-control" id="answer5" name="answer5">
+            </div>
+
+
+            <!-- Add button to submit form -->
+            <button type="submit" class="btn btn-primary">Add Question</button>
+        </form>
+
+        <!-- Table to display existing questions -->
+        <table id="questionTable" class="table mt-5">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Question</th>
+                    <th>Answer 1</th>
+                    <th>Answer 2</th>
+                    <th>Answer 3</th>
+                    <th>Answer 4</th>
+                    <th>Answer 5</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Existing questions will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
